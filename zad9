@@ -1,0 +1,23 @@
+#include "pch.h"
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	string zdanie;
+	getline(cin,zdanie);
+    for(int i=0;i<zdanie.length() - 1;i++){
+		if (zdanie[i] == ' '&& zdanie[i + 1] == ' '){
+			zdanie.replace(i + 1, 1, "");
+			i--;
+		}
+	}
+	for (int i = 2; i < zdanie.length(); i++){
+		if (zdanie[i - 2] == '<'&&zdanie[i - 1] == 'b'&&zdanie[i] == '>')
+		{
+			zdanie[i - 2] = '[';
+			zdanie[i] = ']';
+		}
+	}
+	cout << zdanie;
+}
