@@ -1,0 +1,15 @@
+#include "pch.h"
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	string zdanie;
+	while (1) {
+		cin >> zdanie;
+		for (auto itr : zdanie) {
+			cout << itr << endl;
+			break;
+		}
+	}
+}
